@@ -8,7 +8,7 @@
     <title>약관</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <script src="js/member.js"></script>
+    <script src="js/member.js?v=<?php echo date('YmdHis') ?>"></script>
 </head>
 <body>
     <div class="container">
@@ -26,8 +26,8 @@
                 <li class="nav-item"><a href="#" class="nav-link">로그인</a></li>
             </ul>
         </header>
-        <main>
-            <h1 class="text-center mt-5">회원 약관 및 개인정보 취급방침 동의</h1>
+        <main class="p-5 border rounded-5">
+            <h1 class="text-center">회원 약관 및 개인정보 취급방침 동의</h1>
             <h4>회원 약관</h4>
             <textarea name="" id="" cols="30" rows="10" class="form-control">
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -60,6 +60,10 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 <button class="btn btn-primary w-50" id="btn_member">회원가입</button>
                 <button class="btn btn-secondary w-50">가입취소</button>
             </div>
+
+            <form method="post" name="stipulation_form" action="member_input.php" style="display:none" >
+                <input type="hidden" name="chk" value="0">
+            </form>
 
         </main>
     </div>
